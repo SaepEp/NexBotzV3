@@ -1,0 +1,26 @@
+import { promises } from 'fs'
+import { join } from 'path'
+import { xpRange } from '../lib/levelling.js'
+import moment from 'moment-timezone'
+import os from 'os'
+import fs from 'fs'
+import fetch from 'node-fetch'
+let usrs = db.data.users[m.sender]
+  await conn.sendHydrated(m.chat, `
+Halo Kak ${usrs.registered ? usrs.name : conn.getName(m.sender)}
+  `.trim(), wm, thumbdoc, 'https://chat.whatsapp.com/JytIVwVnOCIFQBA93eZEXu', 'GRUP', null, null, [
+    ['testing', `yes`],
+    ['testinv', `yes`],
+    ['testing', `yes`]
+  ], m)
+}
+handler.help = ['play', 'play2'].map(v => v + ' <pencarian>')
+handler.tags = ['downloader']
+handler.command = /^testing?$/i
+
+handler.exp = 0
+handler.limit = true
+handler.register = true
+handler.level = 20
+
+export default handler
